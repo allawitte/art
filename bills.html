@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>АРТ МОНОПОЛИЯ</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bundle.min.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"> 
+</head>
+<body class="bills">
+  <div class="main_wrapper">
+    <header class="header with_green_border">
+      <a href="new_bill.html" class="button button_green">Новый счет</a>
+      <a href="new_client.html" class="button button_yellow">Новый клиент</a>
+      <div class="user pull_right">ДШ<a href="#" class="show_in_hover">Выйти</a></div>
+    </header>
+    <main>
+      <table class="bills_table all_bills">
+        <thead>
+          <tr>
+            <td><a href="#" data-name="id" class="sort active_sort">ID <i class="fa fa-sort-desc"></i></a></td>
+            <td><a href="#" data-name="name" class="sort">Заказчик <i class="fa fa-sort-asc"></i></a></td>
+            <td><a href="#" data-name="amount" class="sort">Сумма <i class="fa fa-sort-asc"></i></a></td>
+            <td><a href="#" data-name="title" class="sort">Назначение</a></td>
+            <td><a href="#" data-name="responsible" class="sort">Ответственный</a></td>
+            <td><a href="#" data-name="sent" class="sort">Отправлен</a></td>
+            <td><a href="#" data-name="paid" class="sort">Оплачен</a></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="">
+            <td>3210</td>
+            <td>Роман Филимонов</td>
+            <td>320 000 <i class="fa fa-rub" aria-hidden="true"></i></td>
+            <td>Счет на чистовые работы</td>
+            <td class="responsible">Оксана Вербицкая</td>
+            <td class="sent"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td class="paid"><input type="checkbox" name="paid" class="confirm_bill_modal"></td>
+          </tr>
+          <tr class="no_paid">
+            <td>3203</td>
+            <td>Жанна Янковская</td>
+            <td>140 000 <i class="fa fa-rub" aria-hidden="true"></i></td>
+            <td>Счет на услуги по созданию дизайн-проекта (1)</td>
+            <td class="responsible">Людмила Евтушенко</td>
+            <td class="sent"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td class="paid"></td>
+          </tr>
+          <tr class="">
+            <td>3202</td>
+            <td>Виктор Трифонов</td>
+            <td>214 400 <i class="fa fa-rub" aria-hidden="true"></i></td>
+            <td>Счет на зону кухни</td>
+            <td class="responsible">Ольга Петрова</td>
+            <td class="sent"><a href="#">Отправить</a></td>
+            <td class="paid"><input type="checkbox" name="paid" class="confirm_bill_modal"></td>
+          </tr>
+          <tr class="paid_other">
+            <td>3217</td>
+            <td>Билл Кенвуд</td>
+            <td>32 000 <i class="fa fa-rub" aria-hidden="true"></i></td>
+            <td> Счет на услуги по созданию дизайн-проекта (3)</td>
+            <td class="responsible">Оксана Вербицкая</td>
+            <td class="sent"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td class="paid">02.07.2017</td>
+          </tr>
+          <tr class="paid_auto">
+            <td>3212</td>
+            <td>Яна Рудковская</td>
+            <td>24 300 <i class="fa fa-rub" aria-hidden="true"></i></td>
+            <td>Счет на инженерные решения</td>
+            <td class="responsible">Павел Тихомиров</td>
+            <td class="sent"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td class="paid">15.06.2017</td>
+          </tr>
+          <tr class="paid_auto">
+            <td>3220</td>
+            <td>Константин Константиновский</td>
+            <td>840 000 <i class="fa fa-rub" aria-hidden="true"></i></td>
+            <td>Счет на чистовые работы</td>
+            <td class="responsible">Оксана Вербицкая</td>
+            <td class="sent"><i class="fa fa-check" aria-hidden="true"></i></td>
+            <td class="paid">18.05.2017</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer class="bills_footer">
+      <div class="pagination">
+        <span class="informer">1—50 из 186</span>
+        <a href="#" class="pagination_button"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <a href="#" class="pagination_button"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="pagination">
+        <span class="informer">1—50 из 186</span>
+        <a href="#" class="pagination_button"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+      </div>
+      <a href="admin.html" class="pull_right">Админ панель</a>
+    </footer>
+  </div>
+
+
+  <div class="modal" id="confirm_bill">
+    <p>Счет действительно был оплачен?</p>
+    <div class="text_center confirm_buttons">
+      <a href="#" class="button button_gray close_modal">Нет</a>
+      <a href="#" class="button button_green confirm_this_bill">Да</a>
+    </div>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://use.fontawesome.com/d73e38fff4.js"></script>
+</body>
+</html>

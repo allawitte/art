@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>АРТ МОНОПОЛИЯ</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&amp;subset=cyrillic"
+          rel="stylesheet">
+</head>
+<body class="admin">
+<div class="main_wrapper">
+    <header class="header">
+        <a href="#" class="go_back">← назад</a>
+
+        <div class="user">ДШ<a href="#" class="show_in_hover">Выйти</a></div>
+    </header>
+    <main>
+        <h2 class="admin_header">Админ панель</h2>
+
+        <div class="tabs">
+            <ul class="tab_switch">
+                <li><a href="admin_auth.html">Пользователи</a></li>
+                <li><a href="admin_letters.html">Письма</a></li>
+                <li><a href="admin_req.html" class="active">Реквизиты</a></li>
+            </ul>
+        </div>
+        <div class="req_wrapper">
+            <form id="new_req" action="" method="post">
+                <h2>Платежные реквизиты</h2>
+
+                <div class="line_label">
+                    <label for="bik">БИК банка</label>
+                    <input type="text" name="bik" id="bik" value="004555777" disabled>
+                </div>
+                <div class="line_label">
+                    <label for="account">Рассчетный счет</label>
+                    <input type="text" name="account" id="account" value="1111 2222 3333 4444 5555" disabled>
+                </div>
+                <div class="line_label">
+                    <label for="inn">ИНН</label>
+                    <input type="text" name="inn" id="inn" value="1234567890" disabled>
+                </div>
+                <div class="line_label">
+                    <label for="kpp">КПП</label>
+                    <input type="text" name="kpp" id="kpp" value="234567890" disabled>
+                </div>
+                <div class="line_label">
+                    <label for="recipient">ИНН</label>
+                    <input type="text" name="recipient" id="recipient" value="ООО Артмонополия" disabled>
+                </div>
+                <div class="line_label">
+                    <label for="bank">Банк</label>
+                    <input type="text" name="bank" id="bank" value='Точка ПАО банка "ФК Открытие"' disabled>
+                </div>
+                <div class="line_label">
+                    <label for="corr_account">Корр. счет</label>
+                    <input type="text" name="corr_account" id="corr_account" value="12345678901234567890" disabled>
+                </div>
+                <a href="#" class="form_serve edit" data-name="new_req">Редактировать</a>
+                <a href="#" class="cancel_part form_serve" data-name="new_req"><img src="img/cancel.svg" alt="" class="img_close"/></a>
+                <input type="submit" name="submit" id="submit_req" value="Сохранить" class="button button_green"/>
+            </form>
+            <form id="new_payment_term" action="" method="post">
+                <h2>Ссылка на оплаты</h2>
+
+                <div class="line_label">
+                    <label for="term">Дней действует</label>
+                    <input type="text" name="term" id="term" value="3" disabled class="short">
+                </div>
+                <a href="#" class="form_serve edit" data-name="new_payment_term">Редактировать</a>
+                <a href="#" class="cancel_part form_serve" data-name="new_payment_term"><img src="img/cancel.svg" alt="" class="img_close"/></a>
+                <input type="submit" name="submit" id="submit_term" value="Сохранить" class="button button_green"/>
+            </form>
+
+
+
+        </div>
+    </main>
+
+</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="https://use.fontawesome.com/d73e38fff4.js"></script>
+</body>
+</html>

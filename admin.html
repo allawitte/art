@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>АРТ МОНОПОЛИЯ</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bundle.min.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"> 
+</head>
+<body class="admin">
+  <div class="main_wrapper">
+    <header class="header">
+      <a href="#" class="go_back">← назад</a>
+      <div class="user">ДШ<a href="#" class="show_in_hover">Выйти</a></div>
+    </header>
+    <main>
+
+      <div class="tabs">
+        <ul class="tab_switch">
+          <li><a href="#users" class="active">Пользователи</a></li>
+          <li><a href="#">Письма</a></li>
+          <li><a href="#">Реквизиты</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <div id="users" class="tab active">
+          <table class="users_table">
+            <thead>
+              <tr>
+                <td colspan="2"></td>
+                <td>Пользователи</td>
+                <td>Письма</td>
+                <td>Реквизиты</td>
+              </tr>
+            </thead>
+
+          </table>
+
+        </div>
+
+      </div>
+    	<div class="users_wrapper">
+    		<h2>Пользователи</h2>
+    		<ul class="users_list">
+    			<li>
+    				<span>Оксана Вербицкая</span>
+    				<a href="#" class="new_pass">pass</a>
+    				<a href="#" class="remove_user">&times;</a>
+    			</li>
+    			<li>
+    				<span>Людмила Евтушенко</span>
+    				<a href="#" class="new_pass">pass</a>
+    				<a href="#" class="remove_user">&times;</a>
+    			</li>
+    			<li>
+    				<span>Ольга Петрова</span>
+    				<a href="#" class="new_pass">pass</a>
+    				<a href="#" class="remove_user">&times;</a>
+    			</li>
+    			<li>
+    				<span>Павел Тихомиров</span>
+    				<a href="#" class="new_pass">pass</a>
+    				<a href="#" class="remove_user">&times;</a>
+    			</li>
+    		</ul>
+    		
+    	</div>
+      
+    </main>
+  </div>
+
+  <div class="modal" id="new_email_sent">
+  	<button class="close_modal">&times;</button>
+    <p>Новый пароль отправлен</p>
+  </div>
+
+  <div class="modal" id="remove_user">
+    <p>Пользователь будет удален</p>
+    <div class="text_center confirm_buttons">
+      <a href="#" class="button button_gray close_modal">Нет</a>
+      <a href="#" class="button button_red remove_this_user">Да</a>
+    </div>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://use.fontawesome.com/d73e38fff4.js"></script>
+</body>
+</html>

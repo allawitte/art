@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>АРТ МОНОПОЛИЯ</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/bundle.min.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet"> 
+</head>
+<body class="new_bill">
+  <div class="main_wrapper">
+    <header class="header">
+      <a href="#" class="go_back">← назад</a>
+      <div class="user pull_right">ДШ<a href="#" class="show_in_hover">Выйти</a></div>
+    </header>
+    <main>
+      <div class="new_bill_form_wrapper">
+        <h2>Выставление счета</h2>
+        <form action="" method="post" id="new_bill" enctype="multipart/form-data">
+          <div class="line_label">
+            <label for="client">Заказчик</label>
+            <select name="client" id="client" class="ui-select">
+              <option value="" disabled=""></option>
+              <option value="">Билл Кенвуд</option>
+              <option value="">Яна Рудковская</option>
+              <option value="">Константин Константиновский</option>
+              <option value="">Роман Филимонов</option>
+              <option value="">Жанна Янковская</option>
+            </select>
+            <a href="new_client.html" class="form_serve">+ новый клиент</a>
+          </div>
+          <div class="line_label">
+            <label for="target">Назначение счета</label>
+            <select name="target" id="target" class="ui-select">
+              <option value="" disabled=""></option>
+              <option value="">Счет на услуги по созданию дизайн-проекта (1)</option>
+              <option value="">Счет на услуги по созданию дизайн-проекта (2)</option>
+              <option value="">Счет на услуги по созданию дизайн-проекта (3)</option>
+              <option value="">Счет на зону кухни</option>
+              <option value="">Счет на зону санузлов</option>
+              <option value="">Счет на зону гостинной</option>
+              <option value="">Счет на зону спален</option>
+              <option value="">Счет на инженерные решения</option>
+              <option value="">Счет на черновые работы</option>
+              <option value="">Счет на инженерные работы</option>
+              <option value="">Счет на чистовые работы</option>
+              <option value="">Счет на доставку и сборку</option>
+            </select>
+          </div>
+          <div class="line_label">
+            <label for="email">Сумма</label>
+            <div class="line-wrapper">
+              <input type="text" name="cost" id="cost" pattern="^[0-9\s]+$"> <i class="fa fa-rub" aria-hidden="true"></i>
+            </div>
+            <a href="#" class="form_serve parted_link">раздробить</a> <span class="calculate_cost_container"></span>
+            
+          </div>
+
+          <ol class="line_whith_padding bill_parts"></ol>
+
+          <div class="">
+            <p>
+              <label class="label_italic">
+                <input name="bill_file" type="radio" value="generate" id="generate" checked>
+                Оформить автоматически
+              </label>
+            </p>
+            <p>
+              <label class="label_italic">
+                <input name="bill_file" type="radio" value="upload" id="upload">
+                Прикрепить файл
+              </label>
+            </p>
+
+
+            <div class="upload_area">
+              Перетащите скан или файл, или нажмите чтобы выбрать
+            </div>
+            <input type="file" id="choose_file"/>
+          </div>
+          <div>
+            <button class="button button_yellow generate_bill">Сформировать</button>
+          </div>
+
+
+
+          <div class="hidden">
+            <button type="submit" name="submit" id="submit" class="button button_green">Отправить</button>
+            <div class="bill_pdf">
+              <a href="#"><span class="title">Cчет сформирован</span><br/><span class="link">Скачать</span></a>
+            </div>
+          </div>
+
+          <div class="hidden">
+            <button type="submit" name="submit" id="submit" class="button button_green">Отправить</button>
+            <div class="bill_pdf">
+              <a href="#"><span class="title">Cчет сформирован</span><br/><span class="link">Скачать</span></a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+   
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+  <script src="js/vendor/jquery-ui.min.js"></script>
+  <!--script src="js/vendor/dropzone.js"></script-->
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://use.fontawesome.com/d73e38fff4.js"></script>
+</body>
+</html>

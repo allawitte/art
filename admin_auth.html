@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>АРТ МОНОПОЛИЯ</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body class="admin">
+<div class="main_wrapper">
+    <header class="header">
+        <a href="#" class="go_back">← назад</a>
+        <div class="user">ДШ<a href="#" class="show_in_hover">Выйти</a></div>
+    </header>
+    <main>
+        <h2 class="admin_header">Админ панель</h2>
+        <div class="tabs">
+            <ul class="tab_switch">
+                <li><a href="admin_auth.html" class="active">Пользователи</a></li>
+                <li><a href="admin_letters.html">Письма</a></li>
+                <li><a href="admin_req.html">Реквизиты</a></li>
+            </ul>
+        </div>
+        <div class="users_wrapper">
+            <table class="users_list">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th><span class="th">Пользователи</span><i class="fa fa-users" aria-hidden="true"></i></th>
+                    <th><span class="th">Письма</span><i class="fa fa-envelope" aria-hidden="true"></i></th>
+                    <th><span class="th">Реквизиты</span><i class="fa fa-file-text-o" aria-hidden="true"></i></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Оксана Вербицкая</td>
+                    <td><a href="#" class="new_pass">pass</a></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="user"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="letters"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="requisites"/></td>
+                    <td><a href="#" class="remove_user">&times;</a></td>
+                </tr>
+                <tr>
+                    <td>Людмила Евтушенко</td>
+                    <td><a href="#" class="new_pass">pass</a></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="user"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="letters"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="requisites"/></td>
+                    <td><a href="#" class="remove_user">&times;</a></td>
+                </tr>
+                <tr>
+                    <td>Ольга Петрова</td>
+                    <td><a href="#" class="new_pass">pass</a></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="user"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="letters"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="requisites"/></td>
+                    <td><a href="#" class="remove_user">&times;</a></td>
+                </tr>
+                <tr>
+                    <td>Павел Тихомиров</td>
+                    <td><a href="#" class="new_pass">pass</a></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="user"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="letters"/></td>
+                    <td class="for_checkbox"><input type="checkbox" data-category="requisites"/></td>
+                    <td><a href="#" class="remove_user">&times;</a></td>
+                </tr>
+            </table>
+            <a href="new_user.html" class="new_user form_serve">+ пользователь</a>
+        </div>
+
+    </main>
+</div>
+
+<div class="modal" id="new_email_sent">
+    <button class="close_modal">&times;</button>
+    <p>Новый пароль отправлен</p>
+</div>
+
+<div class="modal" id="remove_user">
+    <div class="close_modal close"><img src="img/cancel.svg" alt="" class="img_close"/></div>
+    <p>Пользователь будет удален</p>
+    <div class="text_center confirm_buttons">
+        <a href="#" class="button button_gray close_modal">Нет</a>
+        <a href="#" class="button button_red remove_this_user">Да</a>
+    </div>
+</div>
+<div class="modal" id="give_user_rights">
+    <div class="close_modal close"><img src="img/cancel.svg" alt="" class="img_close"/></div>
+    <p>Пользователь <span id="name"></span> получит доступ к разделу <span id="rights"></span></p>
+    <div class="text_center confirm_buttons">
+        <a href="#" class="button button_gray close_modal">Нет</a>
+        <a href="#" class="button button_green give_permissions">Да</a>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="https://use.fontawesome.com/d73e38fff4.js"></script>
+</body>
+</html>

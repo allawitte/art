@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>АРТ МОНОПОЛИЯ</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body class="admin">
+    <div class="main_wrapper">
+        <header class="header">
+            <a href="#" class="go_back">← назад</a>
+
+            <div class="user">ДШ<a href="#" class="show_in_hover">Выйти</a></div>
+        </header>
+        <main>
+            <h2 class="admin_header">Админ панель</h2>
+
+            <div class="tabs">
+                <ul class="tab_switch">
+                    <li><a href="admin_auth.html">Пользователи</a></li>
+                    <li><a href="admin_letters.html" class="active">Письма</a></li>
+                    <li><a href="admin_req.html">Реквизиты</a></li>
+                </ul>
+            </div>
+            <div class="letters_wrapper">
+
+                <h2>Отправитель</h2>
+                <form method="POST" id="form_1" name="form_1">
+                    <div class="sender_wrapper">
+
+                        <!--div class="sender"-->
+                        <div class="sender_name">
+                            <label for="sender_name">Имя отправителя</label>
+                            <input type="text" value="Артомонополия" disabled/>
+                        </div>
+                        <div class="sender_email">
+                            <label for="sender_email">e-mail</label>
+                            <input type="text" value="robot" disabled/>
+                        </div>
+                        <!--/div-->
+                        <div class="sender_suffix">
+                            <span>@artmonopoly.ru</span>
+                        </div>
+                        <div class="edit">
+                            <a href="#" class="form_serve edit" data-name="sender_wrapper">Редактировать</a>
+                            <a href="#" class="cancel_part form_serve" data-name="sender_wrapper"><img src="img/cancel.svg" alt="" class="img_close" /></a>
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" id="submit_sender" value="Сохранить" class="button button_green">
+                </form>
+                <h2>Выставление счета</h2>
+                <form method="POST" id="form_2" name="form_2">
+                    <div class="set_invoice">
+                        <div class="inputs">
+                            <div class="letter_subject">
+                                <label for="letter_subject">Тема письма</label>
+                                <input type="text" id="letter_subject" value="<name>, Вам выставлен счет!" disabled/>
+                            </div>
+                            <textarea name="" id="" disabled>Здравствуйте, &lt;name&gt;
+                        &lt;purpose&gt; по договору &lt;dogovor&gt; прикреплен к письму. Его необходимо оплатить в течении 3-х дней. Иначе он будет аннулирован.
+                        Сумма к оплате - &lt;sum&gt; рублей.
+                    </textarea>
+
+                            <div class="preview">
+                                <label for="link_online">Изображение &nbsp;&nbsp; <a href="" class="form_serve" id="view">просмотр</a></label>
+                                <textarea name="link_online" id="link_online" disabled>
+                            Можно &lt;link&gt;оплатить счет онлайн&lt;/link&gt;, или через интернет банк по реквизитам. \n Ответственный за выставление счета - &lt;billman&gt;
+                        </textarea>
+                            </div>
+                        </div>
+                        <div class="definitions">
+                            <p>&lt;name&gt; - имя клиента</p>
+
+                            <p>&lt;surname&gt; - фамилия клиента</p>
+
+                            <p>&lt;sum&gt; - сумма счета</p>
+
+                            <p>&lt;dogovor&gt; - номер договора</p>
+
+                            <p>&lt;link&gt;&lt;/link&gt;- ссылка на оплату</p>
+
+                            <p>&lt;billman&gt; - счет выставил</p>
+
+                        </div>
+                        <div class="duplication">
+                            <p class="subject"><strong>Тема:</strong>&nbsp;Алексей, Вам выставлен счет!</p>
+
+                            <p>Здравствуйте, Алексей!</p>
+
+                            <p>Счет за зону кухни по договору <span class="contract_number">BY-001</span> прикреплен к письму. Его необходимо оплатить в течении 3-х дней. Иначе он будет аннулирован. Сумма к оплате - 100 рублей.</p>
+
+                            <p> Можно <a href="">оплатить счет онлайн</a>, или через интернет банк по реквизитам. Ответственный за выставление счета - Дарья Колесникова</p>
+                            <a href="#" class="form_serve edit" data-name="set_invoice">Редактировать</a>
+                            <a href="#" class="cancel_part form_serve" data-name="set_invoice"><img src="img/cancel.svg" alt="" class="img_close" /></a>
+                        </div>
+
+                    </div>
+                    <input type="submit" name="submit" id="submit_set_invoice" value="Сохранить" class="button button_green">
+                </form>
+                <h2>Подтверждение оплаты</h2>
+                <form method="POST" id="form_3" name="form_3">
+                    <div class="confirm_invoice">
+                        <div class="inputs">
+                            <div class="letter_subject">
+                                <label for="letter_subject_pay">Тема письма</label>
+                                <input type="text" id="letter_subject_pay" value="<name>, Оплата получена!" disabled/>
+                            </div>
+                            <textarea name="" id="" disabled>&lt;name&gt;,
+                        благодарим вас за оплату счета по договору &lt;dogovor&gt;. Платеж на сумму &lt;sum&gt; руб. получен
+
+                    </textarea>
+                        </div>
+                        <div class="definitions">
+                            <p>&lt;name&gt; - имя клиента</p>
+
+                            <p>&lt;surname&gt; - фамилия клиента</p>
+
+                            <p>&lt;sum&gt; - сумма счета</p>
+
+                            <p>&lt;dogovor&gt; - номер договора</p>
+
+                            <p>&lt;link&gt;&lt;/link&gt;- ссылка на оплату</p>
+
+                            <p>&lt;billman&gt; - счет выставил</p>
+                        </div>
+                        <div class="duplication">
+                            <p><strong>Тема:</strong>&nbsp;Алексей! Оплата получена!</p>
+                            <p>Алексей, благодарим вас за оплату счета по договору ВУ-001. Платеж на сумму 100 руб. получен</p>
+                            <a href="#" class="form_serve edit" data-name="confirm_invoice">Редактировать</a>
+                            <a href="#" class="cancel_part form_serve" data-name="confirm_invoice"><img src="img/cancel.svg" alt="" class="img_close" /></a>
+                        </div>
+
+                    </div>
+                    <input type="submit" name="submit" id="submit_confirm_invoice" value="Сохранить" class="button button_green">
+                </form>
+            </div>
+        </main>
+        <div class="modal" id="letter_preview">
+            <div class="close_modal close"><img src="img/cancel.svg" alt="" class="img_close" /></div>
+            <form method="POST" id="form_4" name="form_4" enctype="multipart/form-data">
+                <div class="bank_cards">
+                    <div class="cards_container"><img src="img/cards_icon.png" alt="visa master" /></div>
+                    <div class="drag_new"><a href="#">Перетащите или выберите новое фото</a><input type="file" /></div>
+                </div>
+                <p>Скачать счет или оплатить банковской картой онлайн можно <a href="#">на странице счета</a></p>
+                <p class="signature">Ответственный за выставление счета - Анна Козловская</p>
+                <div class="modal-footer">
+                    <div class="footer-logo">
+                        <img src="img/logo_small.png" alt="artmonopoly" class="modal-logo" />
+                    </div>
+                    <div class="modal-contacts">
+                        <a href="#" class="phone">+7 (495) 120 23 22</a>
+                        <a href="#" class="e-mail">info@artmonopoly.ru</a>
+                        <a href="#" class="e-mail">www.artmonopoly.ru</a>
+                    </div>
+                    <div class="modal-contacts">
+                        <p>127018, г. Москва</p>
+                        <p>ул. Складочная д.1 стр.1,</p>
+                        <p>офис 1725 (2 этаж)</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://use.fontawesome.com/d73e38fff4.js"></script>
+</body>
+
+</html>
