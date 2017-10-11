@@ -185,6 +185,20 @@ $(document).ready(function() {
         }
     });
 
+    $('#cost').on('keydown', function(e) {
+        var values = '0123456789';
+        var kode = e.key;
+        console.log('kode', kode);
+        if (kode && kode.length == 1 && !(kode >= 0 && kode < 10) && kode != '.') {
+            e.preventDefault();
+        }
+    });
+    $('#cost').blur(function() {
+        if (this.value == 0) {
+            show_modal('#cost_warning');
+        }
+    });
+
 
     $('.upload_area').on('dragover', function(e) {
         e.preventDefault();
